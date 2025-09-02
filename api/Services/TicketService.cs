@@ -21,11 +21,13 @@ public class TicketService: ITicketService
         return await _context.Tickets.AsNoTracking().ToListAsync();
     }
     
-    public async Task<IEnumerable<Ticket>> GetAllWithOwner()
+    public async Task<IEnumerable<Ticket>> GetAllWithOwner(int pageNumber = 1, int pageSize = 20)
     {
         return await _context.Tickets
             .Include(t => t.Owner)
             .AsNoTracking()
+            .Skip((pageNumber - 1) * pageSize)
+            .Take(pageSize)
             .ToListAsync();
     }
 

@@ -6,7 +6,7 @@ namespace api.Services;
 public interface ITicketService
 {
     Task<IEnumerable<Ticket>> GetAll();
-    Task<IEnumerable<Ticket>> GetAllWithOwner();
+    Task<IEnumerable<Ticket>> GetAllWithOwner(int pageNumber, int pageSize);
     Task<Ticket> GetById(int id);
     Task<IEnumerable<Ticket>> FindByTitle(string title);
     Task<IEnumerable<Ticket>> FindBySeverity(Severity severity);

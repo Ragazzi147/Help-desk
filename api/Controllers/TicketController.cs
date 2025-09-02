@@ -45,9 +45,9 @@ public class TicketController : ControllerBase
     
     [HttpGet]
     [Authorize(Policy = "User")]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll([FromQuery] int pageNumber = 1)
     {
-        var tickets = await _ticketService.GetAllWithOwner();
+        var tickets = await _ticketService.GetAllWithOwner(pageNumber, 20);
         var ticketsDto = tickets.Select(TicketMapper.ToWithOwnerDto).ToList();
         return Ok(ticketsDto);
     }
