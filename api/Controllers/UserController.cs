@@ -41,7 +41,7 @@ public class UserController : ControllerBase
 
 
     [HttpPost("register")]
-    [Authorize(Policy = "Admin")]
+    //[Authorize(Policy = "Admin")]
     public async Task<IActionResult> Register([FromBody] UserRegisterDto registerDto)
     {
         if (registerDto == null)
