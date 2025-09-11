@@ -20,7 +20,7 @@
         <p>Para configurar e executar o projeto localmente, siga os passos abaixo:</p>
         <ol>
             <li><strong>Clone o Repositório:</strong>
-                <pre><code>git clone https://www.youtube.com/watch?v=GRf6so_sois](https://github.com/Ragazzi147/Help-desk.git</code></pre>
+                <pre><code>git clone https://github.com/Ragazzi147/Help-desk.git</code></pre>
             </li>
             <li><strong>Configurar o Back-end (.NET):</strong>
                 <ul>
